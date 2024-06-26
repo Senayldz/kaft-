@@ -30,7 +30,7 @@ function AddressForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http:https://kaft-10.onrender.com:3000/api/address', {
+      await axios.post('http://localhost:3000/api/address', {
         address,
         postalCode,
         city,
