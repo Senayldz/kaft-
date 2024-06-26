@@ -16,7 +16,7 @@ function UpdateProduct() {
   });
 
   useEffect(() => {
-    axios.get(`http:https://kaft-10.onrender.com:3000/api/products/${id}`)
+    axios.get(`https://kaft-10.onrender.com:3000/api/products/${id}`)
       .then(res => {
         setProduct(res.data);
       })
@@ -41,7 +41,7 @@ function UpdateProduct() {
       formData.append('description', product.description);
       formData.append('image', product.image);
 
-      const response = await axios.put(`http:https://kaft-10.onrender.com:3000/api/products/${id}`, formData, {
+      const response = await axios.put(`https://kaft-10.onrender.com:3000/api/products/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -62,7 +62,7 @@ function UpdateProduct() {
     const formData = new FormData();
     formData.append('file', file);
 
-    axios.post('http:https://kaft-10.onrender.com:3000/api/products/upload', formData, {
+    axios.post('https://kaft-10.onrender.com:3000/api/products/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
@@ -98,7 +98,7 @@ function UpdateProduct() {
           </div>
           {product.image && (
             <div>
-              <img src={`http:https://kaft-10.onrender.com:3000/${product.image}`} alt="Product" style={{ width: '100px', height: '100px' }} />
+              <img src={`https://kaft-10.onrender.com:3000/${product.image}`} alt="Product" style={{ width: '100px', height: '100px' }} />
             </div>
           )}
 
