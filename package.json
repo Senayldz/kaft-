@@ -2,17 +2,14 @@
   "dependencies": {
     "@ap.cx/react-fullpage": "^0.3.0",
     "react-dropzone": "^14.2.3",
-    "react-multi-carousel": "^2.8.5",
-    "serve": "^14.2.3"
-  },
-  "scripts": {
-    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-    "build": "npm run build:frontend",
-    "start:frontend": "cd frontend && npm start",
-    "start:backend": "cd backend && npm start",
-    "build:frontend": "cd frontend && npm run build"
+    "react-multi-carousel": "^2.8.5"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
   }
 }

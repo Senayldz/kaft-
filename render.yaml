@@ -1,11 +1,16 @@
 services:
   - type: web
-    name: my-service
+    name: backend
     env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm run start
     envVars:
       - key: NODE_ENV
         value: production
-      - key: NPM_CONFIG_PRODUCTION
-        value: false
+
+  - type: static
+    name: frontend
+    env: node
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
+
